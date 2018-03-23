@@ -1,0 +1,1840 @@
+Microsoft (R) Macro Assembler Version 6.11		    06/09/16 17:37:28
+tempfile.asm						     Page 1 - 1
+
+
+ 0000				DATAS SEGMENT
+ 0000 7C 2A 2A 7C 2A 2A		    YINFU4 DB  	'|**','|**','|**','|**','|**','|**','|**'
+       7C 2A 2A 7C 2A 2A
+       7C 2A 2A 7C 2A 2A
+       7C 2A 2A
+ 0015 7C 2A 2A 7C 2A 2A		    YINFU5 DB  	'|**','|**','|**','|**','|**','|**','|**'
+       7C 2A 2A 7C 2A 2A
+       7C 2A 2A 7C 2A 2A
+       7C 2A 2A
+ 002A 7C 2A 2A 7C 2A 2A		    YINFU6 DB  	'|**','|**','|**','|**','|**','|**','|**'
+       7C 2A 2A 7C 2A 2A
+       7C 2A 2A 7C 2A 2A
+       7C 2A 2A
+ 003F 2A 2A 7C 2A 2A 7C		    YINFU1 DB  	'**|','**|','**|','**|','**|','**|','**|'
+       2A 2A 7C 2A 2A 7C
+       2A 2A 7C 2A 2A 7C
+       2A 2A 7C
+ 0054 2A 2A 7C 2A 2A 7C		    YINFU2 DB  	'**|','**|','**|','**|','**|','**|','**|'
+       2A 2A 7C 2A 2A 7C
+       2A 2A 7C 2A 2A 7C
+       2A 2A 7C
+ 0069 2A 2A 7C 2A 2A 7C		    YINFU3 DB  	'**|','**|','**|','**|','**|','**|','**|'
+       2A 2A 7C 2A 2A 7C
+       2A 2A 7C 2A 2A 7C
+       2A 2A 7C
+ 007E 71 20 20 20 77 20		    ANJIAN DB 	'q   w   e   r   t   y   u   I$'
+       20 20 65 20 20 20
+       72 20 20 20 74 20
+       20 20 79 20 20 20
+       75 20 20 20 49 24
+ 009C 4B 45 59 62 6F 61		    BUF1 DB   	'KEYboard PIANO !',0AH,0DH,'$'
+       72 64 20 50 49 41
+       4E 4F 20 21 0A 0D
+       24
+ 00AF 71 20 20 20 20 77		    BUF2 DB   	'q    w    e    r    t    y    u$'
+       20 20 20 20 65 20
+       20 20 20 72 20 20
+       20 20 74 20 20 20
+       20 79 20 20 20 20
+       75 24
+ 00CF 61 20 20 20 20 73			BUF6 DB   	'a    s    d    f    g    h    j$'
+       20 20 20 20 64 20
+       20 20 20 66 20 20
+       20 20 67 20 20 20
+       20 68 20 20 20 20
+       6A 24
+ 00EF 7A 20 20 20 20 78			BUF7 DB	  	'z    x    c    v    b    n    m$'
+       20 20 20 20 63 20
+       20 20 20 76 20 20
+       20 20 62 20 20 20
+       20 6E 20 20 20 20
+       6D 24
+ 010F 44 4F 2B 20 20 52		    BUF5 DB   	'DO+  RA+  MI+  FA+  SO+  LA+  XI+$'
+       41 2B 20 20 4D 49
+       2B 20 20 46 41 2B
+       20 20 53 4F 2B 20
+       20 4C 41 2B 20 20
+       58 49 2B 24
+ 0131 44 4F 20 20 20 52			BUF8 DB	  	'DO   RA   MI   FA   SO   LA   XI $'  
+       41 20 20 20 4D 49
+       20 20 20 46 41 20
+       20 20 53 4F 20 20
+       20 4C 41 20 20 20
+       58 49 20 24
+ 0153 44 4F 2D 20 20 52			BUF9 DB	  	'DO-  RA-  MI-  FA-  SO-  LA-  XI-$'
+       41 2D 20 20 4D 49
+       2D 20 20 46 41 2D
+       20 20 53 4F 2D 20
+       20 4C 41 2D 20 20
+       58 49 2D 24
+ 0175 20 20 20 20 20 20		    BUF3 DB   	'                                                                                $'
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 24
+ 01C6 4D 41 4B 45 52 3A		    BUF4 DB   	'MAKER: XUJIAMING$'
+       20 58 55 4A 49 41
+       4D 49 4E 47 24
+ 01D7 20 20 20 20 20 20		    BUF10 DB    '                                                                                $'
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 24
+ 0228 20 6E 3D 4E 4F 52		    BEGINS DB 	' n=NORMAL GAME           m=WATCHMEPLAY                                          $'
+       4D 41 4C 20 47 41
+       4D 45 20 20 20 20
+       20 20 20 20 20 20
+       20 6D 3D 57 41 54
+       43 48 4D 45 50 4C
+       41 59 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 24
+ 0279 20 20 20 20 20 20		    ENDD DB   	'                                                   Press ESC to END!',0AH,0DH, '$'
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 50 72 65
+       73 73 20 45 53 43
+       20 74 6F 20 45 4E
+       44 21 0A 0D 24
+ 02C0 20 20 20 20 20 20		    WE  DB    	'                            ** you can play!!!**                               $'	
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 2A 2A
+       20 79 6F 75 20 63
+       61 6E 20 70 6C 61
+       79 21 21 21 2A 2A
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 24
+ 0310 20 20 20 20 20 2D		    piano DB    '     ---------------------------------------------------------------            $'
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 20 20 20 20
+       20 20 20 20 20 20
+       20 20 24
+ 0361 20 20 20 20 7C 2D		    piano1 DB   '    |------------------------------------------------------------- |            $'
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       20 7C 20 20 20 20
+       20 20 20 20 20 20
+       20 20 24
+ 03B2 20 20 20 20 7C 20		    piano2 DB   '    |                         welcome to play                      |            $'
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       77 65 6C 63 6F 6D
+       65 20 74 6F 20 70
+       6C 61 79 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 7C 20 20 20 20
+       20 20 20 20 20 20
+       20 20 24
+ 0403 20 20 20 20 20 2D		    piano3 DB   '     ---------------------------------------------------------------            $'
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 20 20 20 20
+       20 20 20 20 20 20
+       20 20 24
+ 0454 20 20 20 20 7C 20		    piano4 DB   '    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |            $'
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 20 20
+       20 20 20 20 20 20
+       20 20 24
+ 04A5 20 20 20 20 7C 20		    piano5 DB   '    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |            $'
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 20 20
+       20 20 20 20 20 20
+       20 20 24
+ 04F6 20 20 20 20 7C 20		    piano6 DB   '    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |            $'
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 20 20
+       20 20 20 20 20 20
+       20 20 24
+ 0547 20 20 20 20 7C 20		    piano8 DB   '    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |            $'
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 20 20
+       20 20 20 20 20 20
+       20 20 24
+ 0598 20 20 20 20 7C 20		    piano9 DB   '    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |            $'
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 20 20
+       20 20 20 20 20 20
+       20 20 24
+ 05E9 20 20 20 20 7C 20		    piano10 DB  '    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |           $'
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 20 20
+       20 20 20 20 20 20
+       20 24
+ 0639 20 20 20 20 20 44		    piano11 DB   '     DO+RI+MI+FA+SO+LA+XI+DO RI MI FA SO LA XI DO-RI-MI-FA-SO-LA-XI-           $'
+       4F 2B 52 49 2B 4D
+       49 2B 46 41 2B 53
+       4F 2B 4C 41 2B 58
+       49 2B 44 4F 20 52
+       49 20 4D 49 20 46
+       41 20 53 4F 20 4C
+       41 20 58 49 20 44
+       4F 2D 52 49 2D 4D
+       49 2D 46 41 2D 53
+       4F 2D 4C 41 2D 58
+       49 2D 20 20 20 20
+       20 20 20 20 20 20
+       20 24
+ 0689 20 20 20 20 7C 20		    piano12 DB   '    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |            $'
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 7C 20
+       20 7C 20 20 20 20
+       20 20 20 20 20 20
+       20 20 24
+ 06DA 20 20 20 20 20 2D		    piano7 DB   '     ----------------------------------------------------------------            $'
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 2D 2D 2D
+       2D 2D 2D 20 20 20
+       20 20 20 20 20 20
+       20 20 20 24
+ 072C 20 20 20 20 20 20		    THANK DB  	'                              THANKS FOR USING $                             '
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       54 48 41 4E 4B 53
+       20 46 4F 52 20 55
+       53 49 4E 47 20 24
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20
+ 0779 20 20 41 20 20		    FIR DB    	'  A  '
+ 077E 20 20 42 20 20		    SEC DB    	'  B  '
+ 0783 20 20 7C 24		    kongge DB   '  |$'
+ 0787 7C 20 20 7C 24		    kongge1 DB  '|  |$'
+ 078C = 000E			    LEN EQU 	$-SEC
+ 078C 00			    FLAG1 DB 	0
+ 078D 20 20 20 20 20 20			AI  DB    	'                            ** TWO TIGERS!!!press a**                                 $' 
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 2A 2A
+       20 54 57 4F 20 54
+       49 47 45 52 53 21
+       21 21 70 72 65 73
+       73 20 61 2A 2A 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 20 20 20 20
+       20 20 24
+ 07E4				DATAS ENDS
+
+ 0000				STACKS SEGMENT 
+ 0000  0064 [			    DB 100 DUP(0)
+        00
+       ]
+ 0064				STACKS ENDS
+
+ 0000				CODES SEGMENT
+				    ASSUME CS:CODES,DS:DATAS,SS:STACKS,ES:DATAS
+ 0000				START:
+ 0000  B0 03				MOV AL,03H
+ 0002  B4 00			    MOV AH,00H
+ 0004  CD 10			    INT 10H
+ 0006  B8 ---- R		    MOV AX,DATAS
+ 0009  8E D8			    MOV DS,AX
+ 000B  8E C0			    MOV ES,AX
+ 000D  B0 19			    MOV AL,25D
+ 000F  B7 0E			    MOV BH,00001110B
+ 0011  B5 00			    MOV CH,0
+ 0013  B1 00			    MOV CL,0
+ 0015  B6 18			    MOV DH,24
+ 0017  B2 4F			    MOV DL,79
+ 0019  B4 06			    MOV AH,06H
+ 001B  CD 10			    INT 10H
+ 001D  8D 16 009C R		    LEA DX,BUF1
+ 0021  B4 09			    MOV AH,09H
+ 0023  CD 21			    INT 21H
+ 0025  8D 16 0228 R		    LEA DX,BEGINS
+ 0029  B4 09			    MOV AH,09H
+ 002B  CD 21			    INT 21H
+ 002D  8D 16 0279 R		    LEA DX,ENDD
+ 0031  B4 09			    MOV AH,09H
+ 0033  CD 21			    INT 21H
+ 0035  8D 16 0175 R		    LEA DX,BUF3
+ 0039  B4 09			    MOV AH,09H
+ 003B  CD 21			    INT 21H
+ 003D  B7 00			    MOV BH,0
+ 003F  B6 0F			    MOV DH,15
+ 0041  B2 05			    MOV DL,5
+ 0043  B4 02			    MOV AH,02H						
+ 0045  CD 10			    INT 10H
+ 0047  8D 16 00AF R		    LEA DX,BUF2
+ 004B  B4 09			    MOV AH,09H
+ 004D  CD 21			    INT 21H
+ 004F  B7 00			    MOV BH,0
+ 0051  B6 10			    MOV DH,16
+ 0053  B2 05			    MOV DL,5
+ 0055  B4 02			    MOV AH,02H
+ 0057  CD 10			    INT 10H
+ 0059  8D 16 010F R		    LEA DX,BUF5
+ 005D  B4 09			    MOV AH,09H
+ 005F  CD 21			    INT 21H
+ 0061  B7 00				MOV BH,0
+ 0063  B6 11			    MOV DH,17
+ 0065  B2 05			    MOV DL,5
+ 0067  B4 02			    MOV AH,02H									
+ 0069  CD 10			    INT 10H
+ 006B  8D 16 00CF R		    LEA DX,BUF6
+ 006F  B4 09			    MOV AH,09H
+ 0071  CD 21			    INT 21H
+ 0073  B7 00			    MOV BH,0
+ 0075  B6 12			    MOV DH,18
+ 0077  B2 05			    MOV DL,5
+ 0079  B4 02			    MOV AH,02H
+ 007B  CD 10			    INT 10H
+ 007D  8D 16 0131 R		    LEA DX,BUF8
+ 0081  B4 09			    MOV AH,09H
+ 0083  CD 21			    INT 21H
+ 0085  B7 00				MOV BH,0	
+ 0087  B6 13			    MOV DH,19
+ 0089  B2 05			    MOV DL,5
+ 008B  B4 02			    MOV AH,02H			
+ 008D  CD 10			    INT 10H
+ 008F  8D 16 00EF R		    LEA DX,BUF7
+ 0093  B4 09			    MOV AH,09H
+ 0095  CD 21			    INT 21H
+ 0097  B7 00			    MOV BH,0
+ 0099  B6 14			    MOV DH,20
+ 009B  B2 05			    MOV DL,5
+ 009D  B4 02			    MOV AH,02H
+ 009F  CD 10			    INT 10H
+ 00A1  8D 16 0153 R		    LEA DX,BUF9
+ 00A5  B4 09			    MOV AH,09H
+ 00A7  CD 21			    INT 21H
+ 00A9  B4 08			    MOV AH,08H
+ 00AB  CD 21			    INT 21H
+ 00AD  B4 00			    MOV AH,0					;¶Á¼üÅÌ
+ 00AF  CD 16			    INT 16H
+ 00B1  3C 6E			    CMP AL,'n'
+ 00B3  75 03 E9 0690		    JZ KAISHI
+ 00B8  3C 6D			    CMP AL,'m'
+ 00BA  74 00			    JZ WATCHMEPLAY
+ 00BC				WATCHMEPLAY:
+ 00BC  B0 01			    MOV AL,1
+ 00BE  B4 05			    MOV AH,05H
+ 00C0  CD 10			    INT 10H
+ 00C2  B0 19			    MOV AL,25D
+ 00C4  B7 14			    MOV BH,00010100B
+ 00C6  B5 00			    MOV CH,0
+ 00C8  B1 00			    MOV CL,0
+ 00CA  B6 1E			    MOV DH,30
+ 00CC  B2 4F			    MOV DL,79
+ 00CE  B4 06			    MOV AH,06H
+ 00D0  CD 10			    INT 10H
+ 00D2  8D 16 078D R		    LEA DX,AI
+ 00D6  B4 09			    MOV AH,09H
+ 00D8  CD 21			    INT 21H
+ 00DA  8D 16 0310 R			LEA DX,piano
+ 00DE  B4 09			    MOV AH,09H
+ 00E0  CD 21			    INT 21H
+ 00E2  8D 16 0361 R		    LEA DX,piano1
+ 00E6  B4 09			    MOV AH,09H
+ 00E8  CD 21			    INT 21H
+ 00EA  8D 16 03B2 R		    LEA DX,piano2
+ 00EE  B4 09			    MOV AH,09H
+ 00F0  CD 21			    INT 21H
+ 00F2  8D 16 0403 R		    LEA DX,piano3
+ 00F6  B4 09			    MOV AH,09H
+ 00F8  CD 21			    INT 21H
+ 00FA  8D 16 0454 R		    LEA DX,piano4
+ 00FE  B4 09			    MOV AH,09H
+ 0100  CD 21			    INT 21H
+ 0102  8D 16 04A5 R		    LEA DX,piano5
+ 0106  B4 09			    MOV AH,09H
+ 0108  CD 21			    INT 21H
+ 010A  8D 16 04F6 R		    LEA DX,piano6
+ 010E  B4 09			    MOV AH,09H
+ 0110  CD 21			    INT 21H
+ 0112  8D 16 0547 R		    LEA DX,piano8
+ 0116  B4 09			    MOV AH,09H
+ 0118  CD 21			    INT 21H
+ 011A  8D 16 0598 R		    LEA DX,piano9
+ 011E  B4 09			    MOV AH,09H
+ 0120  CD 21			    INT 21H
+ 0122  8D 16 05E9 R		    LEA DX,piano10
+ 0126  B4 09			    MOV AH,09H
+ 0128  CD 21			    INT 21H
+ 012A  8D 16 06DA R		    LEA DX,piano7
+ 012E  B4 09			    MOV AH,09H
+ 0130  CD 21			    INT 21H
+ 0132  8D 16 0639 R		    LEA DX,piano11
+ 0136  B4 09			    MOV AH,09H
+ 0138  CD 21			    INT 21H
+ 013A  E8 0000			    CALL SANG                   ;call SANG
+ 013D				SANG PROC
+ 013D				LIU:
+ 013D  3C 61				CMP AL,'a'
+ 013F  74 12			    JZ Ax1
+ 0141  B4 00				MOV AH,0
+ 0143  CD 16			    INT 16H
+ 0145  3C 1B				CMP AL,1BH
+ 0147  75 03 E9 09C3		    JZ EXIT
+ 014C  3C 31			    CMP AL,'1'
+ 014E  75 03 E9 FEAD		    JZ START
+ 0153				Ax1: 	
+ 0153  B0 B6				MOV AL,0B6H
+ 0155  E6 43				OUT 43H,AL
+ 0157  B8 03DC				MOV AX,988
+ 015A  E6 42			    OUT 42H,AL
+ 015C  8A C4			    MOV AL,AH
+ 015E  E6 42			    OUT 42H,AL
+ 0160  B2 15			    MOV DL,21
+ 0162  B9 0003			    MOV CX,3
+ 0165  8D 36 0015 R		    LEA SI,YINFU5
+ 0169  E8 09DE			    CALL YIN
+ 016C  E4 61			    IN AL,61H
+ 016E  0C 03			    OR AL,3
+ 0170  E6 61			    OUT 61H,AL
+ 0172  E8 098A			 	CALL DELAY
+ 0175  E4 61			    IN AL,61H
+ 0177  24 FC			    AND AL,0FCH
+ 0179  E6 61			    OUT 61H,AL
+ 017B  E8 0A05				CALL CLEAR1
+ 017E  74 00				JZ Ax2
+ 0180				Ax2:	
+ 0180  B0 B6				MOV AL,0B6H
+ 0182  E6 43				OUT 43H,AL 
+ 0184  B8 0370				MOV AX,880
+ 0187  E6 42			    OUT 42H,AL
+ 0189  8A C4			    MOV AL,AH
+ 018B  E6 42			    OUT 42H,AL
+ 018D  B2 18			    MOV DL,24
+ 018F  B9 0003			    MOV CX,3
+ 0192  8D 36 0015 R		    LEA SI,YINFU5
+ 0196  83 C6 03			    ADD SI,3
+ 0199  E8 09AE			    CALL YIN
+ 019C  E4 61			    IN AL,61H
+ 019E  0C 03			    OR AL,3
+ 01A0  E6 61			    OUT 61H,AL
+ 01A2  E8 095A			 	CALL DELAY
+ 01A5  E4 61			    IN AL,61H
+ 01A7  24 FC			    AND AL,0FCH
+ 01A9  E6 61			    OUT 61H,AL
+ 01AB  E8 09D5				CALL CLEAR1
+ 01AE  74 00				JZ Ax3
+ 01B0				Ax3: 
+ 01B0  B0 B6				MOV AL,0B6H
+ 01B2  E6 43				OUT 43H,AL
+ 01B4  B8 0310				MOV AX,784
+ 01B7  E6 42			    OUT 42H,AL
+ 01B9  8A C4			    MOV AL,AH
+ 01BB  E6 42			    OUT 42H,AL
+ 01BD  B2 1B			    MOV DL,27
+ 01BF  B9 0003			    MOV CX,3
+ 01C2  8D 36 0015 R		    LEA SI,YINFU5
+ 01C6  83 C6 06			    ADD SI,6
+ 01C9  E8 097E			    CALL YIN
+ 01CC  E4 61			    IN AL,61H
+ 01CE  0C 03			    OR AL,3
+ 01D0  E6 61			    OUT 61H,AL
+ 01D2  E8 092A			 	CALL DELAY
+ 01D5  E4 61			    IN AL,61H
+ 01D7  24 FC			    AND AL,0FCH
+ 01D9  E6 61			    OUT 61H,AL
+ 01DB  E8 09A5				CALL CLEAR1
+ 01DE  74 00				JZ Ax4
+ 01E0				Ax4: 	
+ 01E0  B0 B6				MOV AL,0B6H
+ 01E2  E6 43				OUT 43H,AL
+ 01E4  B8 03DC				MOV AX,988
+ 01E7  E6 42			    OUT 42H,AL
+ 01E9  8A C4			    MOV AL,AH
+ 01EB  E6 42			    OUT 42H,AL
+ 01ED  B2 15			    MOV DL,21
+ 01EF  B9 0003			    MOV CX,3
+ 01F2  8D 36 0015 R		    LEA SI,YINFU5
+ 01F6  E8 0951			    CALL YIN
+ 01F9  E4 61			    IN AL,61H
+ 01FB  0C 03			    OR AL,3
+ 01FD  E6 61			    OUT 61H,AL
+ 01FF  E8 08FD			 	CALL DELAY
+ 0202  E4 61			    IN AL,61H
+ 0204  24 FC			    AND AL,0FCH
+ 0206  E6 61			    OUT 61H,AL
+ 0208  E8 0978				CALL CLEAR1
+ 020B  74 00				JZ Ax5
+ 020D				Ax5: 	
+ 020D  B0 B6				MOV AL,0B6H
+ 020F  E6 43				OUT 43H,AL
+ 0211  B8 03DC				MOV AX,988
+ 0214  E6 42			    OUT 42H,AL
+ 0216  8A C4			    MOV AL,AH
+ 0218  E6 42			    OUT 42H,AL
+ 021A  B2 15			    MOV DL,21
+ 021C  B9 0003			    MOV CX,3
+ 021F  8D 36 0015 R		    LEA SI,YINFU5
+ 0223  E8 0924			    CALL YIN
+ 0226  E4 61			    IN AL,61H
+ 0228  0C 03			    OR AL,3
+ 022A  E6 61			    OUT 61H,AL
+ 022C  E8 08D0			 	CALL DELAY
+ 022F  E4 61			    IN AL,61H
+ 0231  24 FC			    AND AL,0FCH
+ 0233  E6 61			    OUT 61H,AL
+ 0235  E8 094B				CALL CLEAR1
+ 0238  74 00				JZ Ax6
+ 023A				Ax6:	
+ 023A  B0 B6				MOV AL,0B6H
+ 023C  E6 43				OUT 43H,AL 
+ 023E  B8 0370				MOV AX,880
+ 0241  E6 42			    OUT 42H,AL
+ 0243  8A C4			    MOV AL,AH
+ 0245  E6 42			    OUT 42H,AL
+ 0247  B2 18			    MOV DL,24
+ 0249  B9 0003			    MOV CX,3
+ 024C  8D 36 0015 R		    LEA SI,YINFU5
+ 0250  83 C6 03			    ADD SI,3
+ 0253  E8 08F4			    CALL YIN
+ 0256  E4 61			    IN AL,61H
+ 0258  0C 03			    OR AL,3
+ 025A  E6 61			    OUT 61H,AL
+ 025C  E8 08A0			 	CALL DELAY
+ 025F  E4 61			    IN AL,61H
+ 0261  24 FC			    AND AL,0FCH
+ 0263  E6 61			    OUT 61H,AL
+ 0265  E8 091B				CALL CLEAR1
+ 0268  74 00				JZ Ax7
+ 026A				Ax7: 
+ 026A  B0 B6				MOV AL,0B6H
+ 026C  E6 43				OUT 43H,AL
+ 026E  B8 0310				MOV AX,784
+ 0271  E6 42			    OUT 42H,AL
+ 0273  8A C4			    MOV AL,AH
+ 0275  E6 42			    OUT 42H,AL
+ 0277  B2 1B			    MOV DL,27
+ 0279  B9 0003			    MOV CX,3
+ 027C  8D 36 0015 R		    LEA SI,YINFU5
+ 0280  83 C6 06			    ADD SI,6
+ 0283  E8 08C4			    CALL YIN
+ 0286  E4 61			    IN AL,61H
+ 0288  0C 03			    OR AL,3
+ 028A  E6 61			    OUT 61H,AL
+ 028C  E8 0870			 	CALL DELAY
+ 028F  E4 61			    IN AL,61H
+ 0291  24 FC			    AND AL,0FCH
+ 0293  E6 61			    OUT 61H,AL
+ 0295  E8 08EB				CALL CLEAR1
+ 0298  74 00				JZ Ax8
+ 029A				Ax8: 	
+ 029A  B0 B6				MOV AL,0B6H
+ 029C  E6 43				OUT 43H,AL
+ 029E  B8 03DC				MOV AX,988
+ 02A1  E6 42			    OUT 42H,AL
+ 02A3  8A C4			    MOV AL,AH
+ 02A5  E6 42			    OUT 42H,AL
+ 02A7  B2 15			    MOV DL,21
+ 02A9  B9 0003			    MOV CX,3
+ 02AC  8D 36 0015 R		    LEA SI,YINFU5
+ 02B0  E8 0897			    CALL YIN
+ 02B3  E4 61			    IN AL,61H
+ 02B5  0C 03			    OR AL,3
+ 02B7  E6 61			    OUT 61H,AL
+ 02B9  E8 0843			 	CALL DELAY
+ 02BC  E4 61			    IN AL,61H
+ 02BE  24 FC			    AND AL,0FCH
+ 02C0  E6 61			    OUT 61H,AL
+ 02C2  E8 08BE				CALL CLEAR1
+ 02C5  74 00				JZ Ax9
+ 02C7				Ax9: 
+ 02C7  B0 B6				MOV AL,0B6H
+ 02C9  E6 43				OUT 43H,AL
+ 02CB  B8 0310				MOV AX,784
+ 02CE  E6 42			    OUT 42H,AL
+ 02D0  8A C4			    MOV AL,AH
+ 02D2  E6 42			    OUT 42H,AL
+ 02D4  B2 1B			    MOV DL,27
+ 02D6  B9 0003			    MOV CX,3
+ 02D9  8D 36 0015 R		    LEA SI,YINFU5
+ 02DD  83 C6 06			    ADD SI,6
+ 02E0  E8 0867			    CALL YIN
+ 02E3  E4 61			    IN AL,61H
+ 02E5  0C 03			    OR AL,3
+ 02E7  E6 61			    OUT 61H,AL
+ 02E9  E8 0813			 	CALL DELAY
+ 02EC  E4 61			    IN AL,61H
+ 02EE  24 FC			    AND AL,0FCH
+ 02F0  E6 61			    OUT 61H,AL
+ 02F2  E8 088E				CALL CLEAR1
+ 02F5  B0 66				MOV AL,'f'
+ 02F7  74 00				JZ Ax10
+ 02F9				Ax10:	
+ 02F9  B0 B6				MOV AL,0B6H
+ 02FB  E6 43				OUT 43H,AL 	
+ 02FD  B8 02BA				MOV AX,698
+ 0300  E6 42			    OUT 42H,AL
+ 0302  8A C4			    MOV AL,AH
+ 0304  E6 42			    OUT 42H,AL
+ 0306  B2 1E			    MOV DL,30
+ 0308  B9 0003			    MOV CX,3
+ 030B  8D 36 0015 R		    LEA SI,YINFU5
+ 030F  83 C6 09				ADD SI,9
+ 0312  E8 0835			    CALL YIN
+ 0315  E4 61			    IN AL,61H
+ 0317  0C 03			    OR AL,3
+ 0319  E6 61			    OUT 61H,AL
+ 031B  E8 07E1			 	CALL DELAY
+ 031E  E4 61			    IN AL,61H
+ 0320  24 FC			    AND AL,0FCH
+ 0322  E6 61			    OUT 61H,AL
+ 0324  E8 085C				CALL CLEAR1
+ 0327  74 00				JZ Ax11
+ 0329				Ax11: 	
+ 0329  B0 B6				MOV AL,0B6H
+ 032B  E6 43				OUT 43H,AL
+ 032D  B8 0293				MOV AX,659
+ 0330  E6 42			    OUT 42H,AL
+ 0332  8A C4			    MOV AL,AH
+ 0334  E6 42			    OUT 42H,AL
+ 0336  B2 21			    MOV DL,33
+ 0338  B9 0003			    MOV CX,3
+ 033B  8D 36 0015 R		    LEA SI,YINFU5
+ 033F  83 C6 0C			    ADD SI,12
+ 0342  E8 0805			    CALL YIN
+ 0345  E4 61			    IN AL,61H
+ 0347  0C 03			    OR AL,3
+ 0349  E6 61			    OUT 61H,AL
+ 034B  E8 07B1			 	CALL DELAY
+ 034E  E4 61			    IN AL,61H
+ 0350  24 FC			    AND AL,0FCH
+ 0352  E6 61			    OUT 61H,AL
+ 0354  E8 082C				CALL CLEAR1
+ 0357  74 00				JZ Ax12
+ 0359				Ax12: 
+ 0359  B0 B6				MOV AL,0B6H
+ 035B  E6 43				OUT 43H,AL
+ 035D  B8 0310				MOV AX,784
+ 0360  E6 42			    OUT 42H,AL
+ 0362  8A C4			    MOV AL,AH
+ 0364  E6 42			    OUT 42H,AL
+ 0366  B2 1B			    MOV DL,27
+ 0368  B9 0003			    MOV CX,3
+ 036B  8D 36 0015 R		    LEA SI,YINFU5
+ 036F  83 C6 06			    ADD SI,6
+ 0372  E8 07D5			    CALL YIN
+ 0375  E4 61			    IN AL,61H
+ 0377  0C 03			    OR AL,3
+ 0379  E6 61			    OUT 61H,AL
+ 037B  E8 0781			 	CALL DELAY
+ 037E  E4 61			    IN AL,61H
+ 0380  24 FC			    AND AL,0FCH
+ 0382  E6 61			    OUT 61H,AL
+ 0384  E8 07FC				CALL CLEAR1
+ 0387  B0 66				MOV AL,'f'
+ 0389  74 00				JZ Ax13
+ 038B				Ax13:	
+ 038B  B0 B6				MOV AL,0B6H
+ 038D  E6 43				OUT 43H,AL 	
+ 038F  B8 02BA				MOV AX,698
+ 0392  E6 42			    OUT 42H,AL
+ 0394  8A C4			    MOV AL,AH
+ 0396  E6 42			    OUT 42H,AL
+ 0398  B2 1E			    MOV DL,30
+ 039A  B9 0003			    MOV CX,3
+ 039D  8D 36 0015 R		    LEA SI,YINFU5
+ 03A1  83 C6 09				ADD SI,9
+ 03A4  E8 07A3			    CALL YIN
+ 03A7  E4 61			    IN AL,61H
+ 03A9  0C 03			    OR AL,3
+ 03AB  E6 61			    OUT 61H,AL
+ 03AD  E8 074F			 	CALL DELAY
+ 03B0  E4 61			    IN AL,61H
+ 03B2  24 FC			    AND AL,0FCH
+ 03B4  E6 61			    OUT 61H,AL
+ 03B6  E8 07CA				CALL CLEAR1
+ 03B9  74 00				JZ Ax14
+ 03BB				Ax14: 	
+ 03BB  B0 B6				MOV AL,0B6H
+ 03BD  E6 43				OUT 43H,AL
+ 03BF  B8 0293				MOV AX,659
+ 03C2  E6 42			    OUT 42H,AL
+ 03C4  8A C4			    MOV AL,AH
+ 03C6  E6 42			    OUT 42H,AL
+ 03C8  B2 21			    MOV DL,33
+ 03CA  B9 0003			    MOV CX,3
+ 03CD  8D 36 0015 R		    LEA SI,YINFU5
+ 03D1  83 C6 0C			    ADD SI,12
+ 03D4  E8 0773			    CALL YIN
+ 03D7  E4 61			    IN AL,61H
+ 03D9  0C 03			    OR AL,3
+ 03DB  E6 61			    OUT 61H,AL
+ 03DD  E8 071F			 	CALL DELAY
+ 03E0  E4 61			    IN AL,61H
+ 03E2  24 FC			    AND AL,0FCH
+ 03E4  E6 61			    OUT 61H,AL
+ 03E6  E8 077A				CALL CLEAR
+ 03E9  EB 00				JMP Ax15
+ 03EB				Ax15: 	
+ 03EB  B0 B6				MOV AL,0B6H
+ 03ED  E6 43				OUT 43H,AL
+ 03EF  B8 0293				MOV AX,659
+ 03F2  E6 42			    OUT 42H,AL
+ 03F4  8A C4			    MOV AL,AH
+ 03F6  E6 42			    OUT 42H,AL
+ 03F8  B2 21			    MOV DL,33
+ 03FA  B9 0003			    MOV CX,3
+ 03FD  8D 36 0015 R		    LEA SI,YINFU5
+ 0401  83 C6 0C			    ADD SI,12
+ 0404  E8 0743			    CALL YIN
+ 0407  E4 61			    IN AL,61H
+ 0409  0C 03			    OR AL,3
+ 040B  E6 61			    OUT 61H,AL
+ 040D  E8 06EF			 	CALL DELAY
+ 0410  E4 61			    IN AL,61H
+ 0412  24 FC			    AND AL,0FCH
+ 0414  E6 61			    OUT 61H,AL
+ 0416  E8 076A				CALL CLEAR1
+ 0419  EB 00				jmp Ax16
+ 041B				Ax16: 	
+ 041B  B0 B6				MOV AL,0B6H
+ 041D  E6 43				OUT 43H,AL
+ 041F  B8 024B				MOV AX,587
+ 0422  E6 42			    OUT 42H,AL
+ 0424  8A C4			    MOV AL,AH
+ 0426  E6 42			    OUT 42H,AL
+ 0428  B2 24			    MOV DL,36
+ 042A  B9 0003			    MOV CX,3
+ 042D  8D 36 0015 R		    LEA SI,YINFU5
+ 0431  83 C6 0F			    ADD SI,15
+ 0434  E8 0713			    CALL YIN
+ 0437  E4 61			    IN AL,61H
+ 0439  0C 03			    OR AL,3
+ 043B  E6 61			    OUT 61H,AL
+ 043D  E8 06BF			 	CALL DELAY
+ 0440  E4 61			    IN AL,61H
+ 0442  24 FC			    AND AL,0FCH
+ 0444  E6 61			    OUT 61H,AL
+ 0446  E8 073A				CALL CLEAR1
+ 0449  EB 00				jmp Ax17
+ 044B				Ax17: 	
+ 044B  B0 B6				MOV AL,0B6H
+ 044D  E6 43				OUT 43H,AL
+ 044F  B8 0293				MOV AX,659
+ 0452  E6 42			    OUT 42H,AL
+ 0454  8A C4			    MOV AL,AH
+ 0456  E6 42			    OUT 42H,AL
+ 0458  B2 21			    MOV DL,33
+ 045A  B9 0003			    MOV CX,3
+ 045D  8D 36 0015 R		    LEA SI,YINFU5
+ 0461  83 C6 0C			    ADD SI,12
+ 0464  E8 06E3			    CALL YIN
+ 0467  E4 61			    IN AL,61H
+ 0469  0C 03			    OR AL,3
+ 046B  E6 61			    OUT 61H,AL
+ 046D  E8 068F			 	CALL DELAY
+ 0470  E4 61			    IN AL,61H
+ 0472  24 FC			    AND AL,0FCH
+ 0474  E6 61			    OUT 61H,AL
+ 0476  E8 070A				CALL CLEAR1
+ 0479  EB 00				jmp Ax18
+ 047B				Ax18:	
+ 047B  B0 B6				MOV AL,0B6H
+ 047D  E6 43				OUT 43H,AL 	
+ 047F  B8 02BA				MOV AX,698
+ 0482  E6 42			    OUT 42H,AL
+ 0484  8A C4			    MOV AL,AH
+ 0486  E6 42			    OUT 42H,AL
+ 0488  B2 1E			    MOV DL,30
+ 048A  B9 0003			    MOV CX,3
+ 048D  8D 36 0015 R		    LEA SI,YINFU5
+ 0491  83 C6 09				ADD SI,9
+ 0494  E8 06B3			    CALL YIN
+ 0497  E4 61			    IN AL,61H
+ 0499  0C 03			    OR AL,3
+ 049B  E6 61			    OUT 61H,AL
+ 049D  E8 065F			 	CALL DELAY
+ 04A0  E4 61			    IN AL,61H
+ 04A2  24 FC			    AND AL,0FCH
+ 04A4  E6 61			    OUT 61H,AL
+ 04A6  E8 06DA				CALL CLEAR1
+ 04A9  EB 00				jmp Ax19
+ 04AB				Ax19: 
+ 04AB  B0 B6				MOV AL,0B6H
+ 04AD  E6 43				OUT 43H,AL
+ 04AF  B8 0310				MOV AX,784
+ 04B2  E6 42			    OUT 42H,AL
+ 04B4  8A C4			    MOV AL,AH
+ 04B6  E6 42			    OUT 42H,AL
+ 04B8  B2 1B			    MOV DL,27
+ 04BA  B9 0003			    MOV CX,3
+ 04BD  8D 36 0015 R		    LEA SI,YINFU5
+ 04C1  83 C6 06			    ADD SI,6
+ 04C4  E8 0683			    CALL YIN
+ 04C7  E4 61			    IN AL,61H
+ 04C9  0C 03			    OR AL,3
+ 04CB  E6 61			    OUT 61H,AL
+ 04CD  E8 062F			 	CALL DELAY
+ 04D0  E4 61			    IN AL,61H
+ 04D2  24 FC			    AND AL,0FCH
+ 04D4  E6 61			    OUT 61H,AL
+ 04D6  E8 06AA				CALL CLEAR1
+ 04D9  B0 66				MOV AL,'f'
+ 04DB  EB 00				jmp Ax20
+ 04DD				Ax20: 	
+ 04DD  B0 B6				MOV AL,0B6H
+ 04DF  E6 43				OUT 43H,AL
+ 04E1  B8 03DC				MOV AX,988
+ 04E4  E6 42			    OUT 42H,AL
+ 04E6  8A C4			    MOV AL,AH
+ 04E8  E6 42			    OUT 42H,AL
+ 04EA  B2 15			    MOV DL,21
+ 04EC  B9 0003			    MOV CX,3
+ 04EF  8D 36 0015 R		    LEA SI,YINFU5
+ 04F3  E8 0654			    CALL YIN
+ 04F6  E4 61			    IN AL,61H
+ 04F8  0C 03			    OR AL,3
+ 04FA  E6 61			    OUT 61H,AL
+ 04FC  E8 0600			 	CALL DELAY
+ 04FF  E4 61			    IN AL,61H
+ 0501  24 FC			    AND AL,0FCH
+ 0503  E6 61			    OUT 61H,AL
+ 0505  E8 067B				CALL CLEAR1
+ 0508  EB 00				jmp Ax21
+
+					
+					
+
+ 050A				Ax21: 	
+ 050A  B0 B6				MOV AL,0B6H
+ 050C  E6 43				OUT 43H,AL
+ 050E  B8 0293				MOV AX,659
+ 0511  E6 42			    OUT 42H,AL
+ 0513  8A C4			    MOV AL,AH
+ 0515  E6 42			    OUT 42H,AL
+ 0517  B2 21			    MOV DL,33
+ 0519  B9 0003			    MOV CX,3
+ 051C  8D 36 0015 R		    LEA SI,YINFU5
+ 0520  83 C6 0C			    ADD SI,12
+ 0523  E8 0624			    CALL YIN
+ 0526  E4 61			    IN AL,61H
+ 0528  0C 03			    OR AL,3
+ 052A  E6 61			    OUT 61H,AL
+ 052C  E8 05D0			 	CALL DELAY
+ 052F  E4 61			    IN AL,61H
+ 0531  24 FC			    AND AL,0FCH
+ 0533  E6 61			    OUT 61H,AL
+ 0535  E8 064B				CALL CLEAR1
+ 0538  EB 00				jmp Ax22
+ 053A				Ax22: 	
+ 053A  B0 B6				MOV AL,0B6H
+ 053C  E6 43				OUT 43H,AL
+ 053E  B8 024B				MOV AX,587
+ 0541  E6 42			    OUT 42H,AL
+ 0543  8A C4			    MOV AL,AH
+ 0545  E6 42			    OUT 42H,AL
+ 0547  B2 24			    MOV DL,36
+ 0549  B9 0003			    MOV CX,3
+ 054C  8D 36 0015 R		    LEA SI,YINFU5
+ 0550  83 C6 0F			    ADD SI,15
+ 0553  E8 05F4			    CALL YIN
+ 0556  E4 61			    IN AL,61H
+ 0558  0C 03			    OR AL,3
+ 055A  E6 61			    OUT 61H,AL
+ 055C  E8 05A0			 	CALL DELAY
+ 055F  E4 61			    IN AL,61H
+ 0561  24 FC			    AND AL,0FCH
+ 0563  E6 61			    OUT 61H,AL
+ 0565  E8 061B				CALL CLEAR1
+ 0568  EB 00				jmp Ax23
+ 056A				Ax23: 	
+ 056A  B0 B6				MOV AL,0B6H
+ 056C  E6 43				OUT 43H,AL
+ 056E  B8 0293				MOV AX,659
+ 0571  E6 42			    OUT 42H,AL
+ 0573  8A C4			    MOV AL,AH
+ 0575  E6 42			    OUT 42H,AL
+ 0577  B2 21			    MOV DL,33
+ 0579  B9 0003			    MOV CX,3
+ 057C  8D 36 0015 R		    LEA SI,YINFU5
+ 0580  83 C6 0C			    ADD SI,12
+ 0583  E8 05C4			    CALL YIN
+ 0586  E4 61			    IN AL,61H
+ 0588  0C 03			    OR AL,3
+ 058A  E6 61			    OUT 61H,AL
+ 058C  E8 0570			 	CALL DELAY
+ 058F  E4 61			    IN AL,61H
+ 0591  24 FC			    AND AL,0FCH
+ 0593  E6 61			    OUT 61H,AL
+ 0595  E8 05EB				CALL CLEAR1
+ 0598  EB 00				jmp Ax24
+ 059A				Ax24:	
+ 059A  B0 B6				MOV AL,0B6H
+ 059C  E6 43				OUT 43H,AL 	
+ 059E  B8 02BA				MOV AX,698
+ 05A1  E6 42			    OUT 42H,AL
+ 05A3  8A C4			    MOV AL,AH
+ 05A5  E6 42			    OUT 42H,AL
+ 05A7  B2 1E			    MOV DL,30
+ 05A9  B9 0003			    MOV CX,3
+ 05AC  8D 36 0015 R		    LEA SI,YINFU5
+ 05B0  83 C6 09				ADD SI,9
+ 05B3  E8 0594			    CALL YIN
+ 05B6  E4 61			    IN AL,61H
+ 05B8  0C 03			    OR AL,3
+ 05BA  E6 61			    OUT 61H,AL
+ 05BC  E8 0540			 	CALL DELAY
+ 05BF  E4 61			    IN AL,61H
+ 05C1  24 FC			    AND AL,0FCH
+ 05C3  E6 61			    OUT 61H,AL
+ 05C5  E8 05BB				CALL CLEAR1
+ 05C8  EB 00				jmp Ax25
+ 05CA				Ax25: 
+ 05CA  B0 B6				MOV AL,0B6H
+ 05CC  E6 43				OUT 43H,AL
+ 05CE  B8 0310				MOV AX,784
+ 05D1  E6 42			    OUT 42H,AL
+ 05D3  8A C4			    MOV AL,AH
+ 05D5  E6 42			    OUT 42H,AL
+ 05D7  B2 1B			    MOV DL,27
+ 05D9  B9 0003			    MOV CX,3
+ 05DC  8D 36 0015 R		    LEA SI,YINFU5
+ 05E0  83 C6 06			    ADD SI,6
+ 05E3  E8 0564			    CALL YIN
+ 05E6  E4 61			    IN AL,61H
+ 05E8  0C 03			    OR AL,3
+ 05EA  E6 61			    OUT 61H,AL
+ 05EC  E8 0510			 	CALL DELAY
+ 05EF  E4 61			    IN AL,61H
+ 05F1  24 FC			    AND AL,0FCH
+ 05F3  E6 61			    OUT 61H,AL
+ 05F5  E8 058B				CALL CLEAR1
+ 05F8  B0 66				MOV AL,'f'
+ 05FA  EB 00				jmp Ax26
+ 05FC				Ax26: 	
+ 05FC  B0 B6				MOV AL,0B6H
+ 05FE  E6 43				OUT 43H,AL
+ 0600  B8 03DC				MOV AX,988
+ 0603  E6 42			    OUT 42H,AL
+ 0605  8A C4			    MOV AL,AH
+ 0607  E6 42			    OUT 42H,AL
+ 0609  B2 15			    MOV DL,21
+ 060B  B9 0003			    MOV CX,3
+ 060E  8D 36 0015 R		    LEA SI,YINFU5
+ 0612  E8 0535			    CALL YIN
+ 0615  E4 61			    IN AL,61H
+ 0617  0C 03			    OR AL,3
+ 0619  E6 61			    OUT 61H,AL
+ 061B  E8 04E1			 	CALL DELAY
+ 061E  E4 61			    IN AL,61H
+ 0620  24 FC			    AND AL,0FCH
+ 0622  E6 61			    OUT 61H,AL
+ 0624  E8 055C				CALL CLEAR1
+ 0627  EB 00				jmp Ax27
+ 0629				Ax27:	
+ 0629  B0 B6				MOV AL,0B6H
+ 062B  E6 43				OUT 43H,AL 
+ 062D  B8 0370				MOV AX,880
+ 0630  E6 42			    OUT 42H,AL
+ 0632  8A C4			    MOV AL,AH
+ 0634  E6 42			    OUT 42H,AL
+ 0636  B2 18			    MOV DL,24
+ 0638  B9 0003			    MOV CX,3
+ 063B  8D 36 0015 R		    LEA SI,YINFU5
+ 063F  83 C6 03			    ADD SI,3
+ 0642  E8 0505			    CALL YIN
+ 0645  E4 61			    IN AL,61H
+ 0647  0C 03			    OR AL,3
+ 0649  E6 61			    OUT 61H,AL
+ 064B  E8 04B1			 	CALL DELAY
+ 064E  E4 61			    IN AL,61H
+ 0650  24 FC			    AND AL,0FCH
+ 0652  E6 61			    OUT 61H,AL
+ 0654  E8 052C				CALL CLEAR1
+ 0657  EB 00				jmp Ax28
+ 0659				Ax28: 	
+ 0659  B0 B6				MOV AL,0B6H
+ 065B  E6 43				OUT 43H,AL
+ 065D  B8 0527				MOV AX,1319
+ 0660  E6 42			    OUT 42H,AL
+ 0662  8A C4			    MOV AL,AH
+ 0664  E6 42			    OUT 42H,AL
+ 0666  B2 36			    MOV DL,54
+ 0668  B9 0003			    MOV CX,3
+ 066B  8D 36 002A R		    LEA SI,YINFU6
+ 066F  83 C6 0C			    ADD SI,12
+ 0672  E8 04D5			    CALL YIN
+ 0675  E4 61			    IN AL,61H
+ 0677  0C 03			    OR AL,3
+ 0679  E6 61			    OUT 61H,AL
+ 067B  E8 0481			 	CALL DELAY
+ 067E  E4 61			    IN AL,61H
+ 0680  24 FC			    AND AL,0FCH
+ 0682  E6 61			    OUT 61H,AL
+ 0684  E8 04FC				CALL CLEAR1
+ 0687  EB 00				jmp Ax29
+ 0689				Ax29: 	
+ 0689  B0 B6				MOV AL,0B6H
+ 068B  E6 43				OUT 43H,AL
+ 068D  B8 03DC				MOV AX,988
+ 0690  E6 42			    OUT 42H,AL
+ 0692  8A C4			    MOV AL,AH
+ 0694  E6 42			    OUT 42H,AL
+ 0696  B2 15			    MOV DL,21
+ 0698  B9 0003			    MOV CX,3
+ 069B  8D 36 0015 R		    LEA SI,YINFU5
+ 069F  E8 04A8			    CALL YIN
+ 06A2  E4 61			    IN AL,61H
+ 06A4  0C 03			    OR AL,3
+ 06A6  E6 61			    OUT 61H,AL
+ 06A8  E8 0454			 	CALL DELAY
+ 06AB  E4 61			    IN AL,61H
+ 06AD  24 FC			    AND AL,0FCH
+ 06AF  E6 61			    OUT 61H,AL
+ 06B1  E8 04CF				CALL CLEAR1
+ 06B4  B0 73				MOV AL,'s'
+ 06B6  EB 00				jmp Ax30
+ 06B8				Ax30:	
+ 06B8  B0 B6				MOV AL,0B6H
+ 06BA  E6 43				OUT 43H,AL 
+ 06BC  B8 0370				MOV AX,880
+ 06BF  E6 42			    OUT 42H,AL
+ 06C1  8A C4			    MOV AL,AH
+ 06C3  E6 42			    OUT 42H,AL
+ 06C5  B2 18			    MOV DL,24
+ 06C7  B9 0003			    MOV CX,3
+ 06CA  8D 36 0015 R		    LEA SI,YINFU5
+ 06CE  83 C6 03			    ADD SI,3
+ 06D1  E8 0476			    CALL YIN
+ 06D4  E4 61			    IN AL,61H
+ 06D6  0C 03			    OR AL,3
+ 06D8  E6 61			    OUT 61H,AL
+ 06DA  E8 0422			 	CALL DELAY
+ 06DD  E4 61			    IN AL,61H
+ 06DF  24 FC			    AND AL,0FCH
+ 06E1  E6 61			    OUT 61H,AL
+ 06E3  E8 049D				CALL CLEAR1
+ 06E6  B0 64				MOV AL,'d'
+ 06E8  EB 00				jmp Ax31
+ 06EA				Ax31: 	
+ 06EA  B0 B6				MOV AL,0B6H
+ 06EC  E6 43				OUT 43H,AL
+ 06EE  B8 0527				MOV AX,1319
+ 06F1  E6 42			    OUT 42H,AL
+ 06F3  8A C4			    MOV AL,AH
+ 06F5  E6 42			    OUT 42H,AL
+ 06F7  B2 36			    MOV DL,54
+ 06F9  B9 0003			    MOV CX,3
+ 06FC  8D 36 002A R		    LEA SI,YINFU6
+ 0700  83 C6 0C			    ADD SI,12
+ 0703  E8 0444			    CALL YIN
+ 0706  E4 61			    IN AL,61H
+ 0708  0C 03			    OR AL,3
+ 070A  E6 61			    OUT 61H,AL
+ 070C  E8 03F0			 	CALL DELAY
+ 070F  E4 61			    IN AL,61H
+ 0711  24 FC			    AND AL,0FCH
+ 0713  E6 61			    OUT 61H,AL
+ 0715  E8 046B				CALL CLEAR1
+ 0718  EB 00				jmp Ax32
+ 071A				Ax32: 	
+ 071A  B0 B6				MOV AL,0B6H
+ 071C  E6 43				OUT 43H,AL
+ 071E  B8 03DC				MOV AX,988
+ 0721  E6 42			    OUT 42H,AL
+ 0723  8A C4			    MOV AL,AH
+ 0725  E6 42			    OUT 42H,AL
+ 0727  B2 15			    MOV DL,21
+ 0729  B9 0003			    MOV CX,3
+ 072C  8D 36 0015 R		    LEA SI,YINFU5
+ 0730  E8 0417			    CALL YIN
+ 0733  E4 61			    IN AL,61H
+ 0735  0C 03			    OR AL,3
+ 0737  E6 61			    OUT 61H,AL
+ 0739  E8 03C3			 	CALL DELAY
+ 073C  E4 61			    IN AL,61H
+ 073E  24 FC			    AND AL,0FCH
+ 0740  E6 61			    OUT 61H,AL
+ 0742  E8 043E				CALL CLEAR1
+ 0745  E9 F8B8				jmp START
+ 0748				SANG ENDP
+
+ 0748				KAISHI:
+ 0748  B0 01			    MOV AL,1
+ 074A  B4 05			    MOV AH,05H
+ 074C  CD 10			    INT 10H
+ 074E  B0 19			    MOV AL,25D
+ 0750  B7 14			    MOV BH,00010100B
+ 0752  B5 00			    MOV CH,0
+ 0754  B1 00			    MOV CL,0
+ 0756  B6 1E			    MOV DH,30
+ 0758  B2 4F			    MOV DL,79
+ 075A  B4 06			    MOV AH,06H
+ 075C  CD 10			    INT 10H
+ 075E  8D 16 02C0 R		    LEA DX,WE
+ 0762  B4 09			    MOV AH,09H
+ 0764  CD 21			    INT 21H
+ 0766  8D 16 0310 R			LEA DX,piano
+ 076A  B4 09			    MOV AH,09H
+ 076C  CD 21			    INT 21H
+ 076E  8D 16 0361 R		    LEA DX,piano1
+ 0772  B4 09			    MOV AH,09H
+ 0774  CD 21			    INT 21H
+ 0776  8D 16 03B2 R		    LEA DX,piano2
+ 077A  B4 09			    MOV AH,09H
+ 077C  CD 21			    INT 21H
+ 077E  8D 16 0403 R		    LEA DX,piano3
+ 0782  B4 09			    MOV AH,09H
+ 0784  CD 21			    INT 21H
+ 0786  8D 16 0454 R		    LEA DX,piano4
+ 078A  B4 09			    MOV AH,09H
+ 078C  CD 21			    INT 21H
+ 078E  8D 16 04A5 R		    LEA DX,piano5
+ 0792  B4 09			    MOV AH,09H
+ 0794  CD 21			    INT 21H
+ 0796  8D 16 04F6 R		    LEA DX,piano6
+ 079A  B4 09			    MOV AH,09H
+ 079C  CD 21			    INT 21H
+ 079E  8D 16 0547 R		    LEA DX,piano8
+ 07A2  B4 09			    MOV AH,09H
+ 07A4  CD 21			    INT 21H
+ 07A6  8D 16 0598 R		    LEA DX,piano9
+ 07AA  B4 09			    MOV AH,09H
+ 07AC  CD 21			    INT 21H
+ 07AE  8D 16 05E9 R		    LEA DX,piano10
+ 07B2  B4 09			    MOV AH,09H
+ 07B4  CD 21			    INT 21H
+ 07B6  8D 16 06DA R		    LEA DX,piano7
+ 07BA  B4 09			    MOV AH,09H
+ 07BC  CD 21			    INT 21H
+ 07BE  8D 16 0639 R		    LEA DX,piano11
+ 07C2  B4 09			    MOV AH,09H
+ 07C4  CD 21			    INT 21H
+ 07C6  BA 0000			    MOV DX,0
+ 07C9  E8 0000			    CALL SONG
+ 07CC				SONG PROC
+ 07CC				WU: 
+ 07CC  E8 0394				call clear
+ 07CF  B4 00				MOV AH,0					;¶Á¼üÅÌ
+ 07D1  CD 16			    INT 16H
+ 07D3  3C 71				CMP AL,'q'
+ 07D5  75 03 E9 0096		    JZ A1
+ 07DA  3C 77			    CMP AL,'w'
+ 07DC  75 03 E9 00AB		    JZ B1
+ 07E1  3C 65			    CMP AL,'e'
+ 07E3  75 03 E9 00C3		    JZ C1
+ 07E8  3C 72			    CMP AL,'r'
+ 07EA  75 03 E9 00DB		    JZ D1
+ 07EF  3C 74			    CMP AL,'t'
+ 07F1  75 03 E9 00F3		    JZ E1
+ 07F6  3C 79			    CMP AL,'y'
+ 07F8  75 03 E9 010B		    JZ F1
+ 07FD  3C 75			    CMP AL,'u'
+ 07FF  75 03 E9 0123		    JZ G1
+ 0804  3C 61				CMP AL,'a'
+ 0806  75 03 E9 013B		    JZ A2
+ 080B  3C 73			    CMP AL,'s'
+ 080D  75 03 E9 0150		    JZ B2
+ 0812  3C 64			    CMP AL,'d'
+ 0814  75 03 E9 0168		    JZ C2
+ 0819  3C 66			    CMP AL,'f'
+ 081B  75 03 E9 0180		    JZ D2
+ 0820  3C 67			    CMP AL,'g'
+ 0822  75 03 E9 0198		    JZ E2
+ 0827  3C 68			    CMP AL,'h'
+ 0829  75 03 E9 01B0		    JZ F2
+ 082E  3C 6A			    CMP AL,'j'
+ 0830  75 03 E9 01C8		    JZ G2
+ 0835  3C 7A				CMP AL,'z'
+ 0837  75 03 E9 01E0		    JZ A3
+ 083C  3C 78			    CMP AL,'x'
+ 083E  75 03 E9 01F5		    JZ B3
+ 0843  3C 63			    CMP AL,'c'
+ 0845  75 03 E9 020D		    JZ C3
+ 084A  3C 76			    CMP AL,'v'
+ 084C  75 03 E9 0224		    JZ D3
+ 0851  3C 62			    CMP AL,'b'
+ 0853  75 03 E9 023B		    JZ E3
+ 0858  3C 6E			    CMP AL,'n'
+ 085A  75 03 E9 0252		    JZ F3
+ 085F  3C 6D			    CMP AL,'m'
+ 0861  75 03 E9 0269		    JZ G3
+ 0866  3C 1B				CMP AL,1BH
+ 0868  75 03 E9 02A2		    JZ EXIT
+ 086D  E9 FF5C			    JMP WU
+ 0870				A1: 	
+ 0870  B0 B6				MOV AL,0B6H
+ 0872  E6 43				OUT 43H,AL
+ 0874  B8 01EE				MOV AX,494
+ 0877  E6 42			    OUT 42H,AL
+ 0879  8A C4			    MOV AL,AH
+ 087B  E6 42			    OUT 42H,AL
+ 087D  B2 00				MOV DL,0
+ 087F  B9 0003			    MOV CX,3
+ 0882  8D 36 0054 R		    LEA SI,YINFU2
+ 0886  E8 02C1			    CALL YIN
+ 0889  E9 0261			    JMP MA
+ 088C				B1:	
+ 088C  B0 B6				MOV AL,0B6H
+ 088E  E6 43				OUT 43H,AL 
+ 0890  B8 01B8				MOV AX,440
+ 0893  E6 42			    OUT 42H,AL
+ 0895  8A C4			    MOV AL,AH
+ 0897  E6 42			    OUT 42H,AL
+ 0899  B2 03			    MOV DL,3
+ 089B  B9 0003			    MOV CX,3
+ 089E  8D 36 0054 R		    LEA SI,YINFU2
+ 08A2  83 C6 03			    ADD SI,3
+ 08A5  E8 02A2			    CALL YIN
+ 08A8  E9 0242			    JMP MA
+ 08AB				C1: 
+ 08AB  B0 B6				MOV AL,0B6H
+ 08AD  E6 43				OUT 43H,AL
+ 08AF  B8 0188				MOV AX,392
+ 08B2  E6 42			    OUT 42H,AL
+ 08B4  8A C4			    MOV AL,AH
+ 08B6  E6 42			    OUT 42H,AL
+ 08B8  B2 06			    MOV DL,6
+ 08BA  B9 0003			    MOV CX,3
+ 08BD  8D 36 0054 R		    LEA SI,YINFU2
+ 08C1  83 C6 06			    ADD SI,6
+ 08C4  E8 0283			    CALL YIN
+ 08C7  E9 0223			    JMP MA
+ 08CA				D1:	
+ 08CA  B0 B6				MOV AL,0B6H
+ 08CC  E6 43				OUT 43H,AL 	
+ 08CE  B8 015D				MOV AX,349
+ 08D1  E6 42			    OUT 42H,AL
+ 08D3  8A C4			    MOV AL,AH
+ 08D5  E6 42			    OUT 42H,AL
+ 08D7  B2 09			    MOV DL,9
+ 08D9  B9 0003			    MOV CX,3
+ 08DC  8D 36 0054 R		    LEA SI,YINFU2
+ 08E0  83 C6 09				ADD SI,9
+ 08E3  E8 0264			    CALL YIN
+ 08E6  E9 0204			    JMP MA
+ 08E9				E1: 	
+ 08E9  B0 B6				MOV AL,0B6H
+ 08EB  E6 43				OUT 43H,AL
+ 08ED  B8 014A				MOV AX,330
+ 08F0  E6 42			    OUT 42H,AL
+ 08F2  8A C4			    MOV AL,AH
+ 08F4  E6 42			    OUT 42H,AL
+ 08F6  B2 0C			    MOV DL,12
+ 08F8  B9 0003			    MOV CX,3
+ 08FB  8D 36 0054 R		    LEA SI,YINFU2
+ 08FF  83 C6 0C			    ADD SI,12
+ 0902  E8 0245			    CALL YIN
+ 0905  E9 01E5			    JMP MA
+ 0908				F1: 	
+ 0908  B0 B6				MOV AL,0B6H
+ 090A  E6 43				OUT 43H,AL
+ 090C  B8 0126				MOV AX,294
+ 090F  E6 42			    OUT 42H,AL
+ 0911  8A C4			    MOV AL,AH
+ 0913  E6 42			    OUT 42H,AL
+ 0915  B2 0F			    MOV DL,15
+ 0917  B9 0003			    MOV CX,3
+ 091A  8D 36 0054 R		    LEA SI,YINFU2
+ 091E  83 C6 0F			    ADD SI,15
+ 0921  E8 0226			    CALL YIN
+ 0924  E9 01C6			    JMP MA
+ 0927				G1: 	
+ 0927  B0 B6				MOV AL,0B6H
+ 0929  E6 43				OUT 43H,AL
+ 092B  B8 0106				MOV AX,262
+ 092E  E6 42			    OUT 42H,AL
+ 0930  8A C4			    MOV AL,AH
+ 0932  E6 42			    OUT 42H,AL
+ 0934  B2 12			    MOV DL,18
+ 0936  B9 0003			    MOV CX,3
+ 0939  8D 36 0054 R		    LEA SI,YINFU2
+ 093D  83 C6 12			    ADD SI,18
+ 0940  E8 0207			    CALL YIN
+ 0943  E9 01A7			    JMP MA
+ 0946				A2: 	
+ 0946  B0 B6				MOV AL,0B6H
+ 0948  E6 43				OUT 43H,AL
+ 094A  B8 03DC				MOV AX,988
+ 094D  E6 42			    OUT 42H,AL
+ 094F  8A C4			    MOV AL,AH
+ 0951  E6 42			    OUT 42H,AL
+ 0953  B2 15			    MOV DL,21
+ 0955  B9 0003			    MOV CX,3
+ 0958  8D 36 003F R		    LEA SI,YINFU1
+ 095C  E8 01EB			    CALL YIN
+ 095F  E9 018B			    JMP MA
+ 0962				B2:	
+ 0962  B0 B6				MOV AL,0B6H
+ 0964  E6 43				OUT 43H,AL 
+ 0966  B8 0370				MOV AX,880
+ 0969  E6 42			    OUT 42H,AL
+ 096B  8A C4			    MOV AL,AH
+ 096D  E6 42			    OUT 42H,AL
+ 096F  B2 18			    MOV DL,24
+ 0971  B9 0003			    MOV CX,3
+ 0974  8D 36 003F R		    LEA SI,YINFU1
+ 0978  83 C6 03			    ADD SI,3
+ 097B  E8 01CC			    CALL YIN
+ 097E  E9 016C			    JMP MA
+ 0981				C2: 
+ 0981  B0 B6				MOV AL,0B6H
+ 0983  E6 43				OUT 43H,AL
+ 0985  B8 0310				MOV AX,784
+ 0988  E6 42			    OUT 42H,AL
+ 098A  8A C4			    MOV AL,AH
+ 098C  E6 42			    OUT 42H,AL
+ 098E  B2 1B			    MOV DL,27
+ 0990  B9 0003			    MOV CX,3
+ 0993  8D 36 003F R		    LEA SI,YINFU1
+ 0997  83 C6 06			    ADD SI,6
+ 099A  E8 01AD			    CALL YIN
+ 099D  E9 014D			    JMP MA
+ 09A0				D2:	
+ 09A0  B0 B6				MOV AL,0B6H
+ 09A2  E6 43				OUT 43H,AL 	
+ 09A4  B8 02BA				MOV AX,698
+ 09A7  E6 42			    OUT 42H,AL
+ 09A9  8A C4			    MOV AL,AH
+ 09AB  E6 42			    OUT 42H,AL
+ 09AD  B2 1E			    MOV DL,30
+ 09AF  B9 0003			    MOV CX,3
+ 09B2  8D 36 003F R		    LEA SI,YINFU1
+ 09B6  83 C6 09				ADD SI,9
+ 09B9  E8 018E			    CALL YIN
+ 09BC  E9 012E			    JMP MA
+ 09BF				E2: 	
+ 09BF  B0 B6				MOV AL,0B6H
+ 09C1  E6 43				OUT 43H,AL
+ 09C3  B8 0293				MOV AX,659
+ 09C6  E6 42			    OUT 42H,AL
+ 09C8  8A C4			    MOV AL,AH
+ 09CA  E6 42			    OUT 42H,AL
+ 09CC  B2 21			    MOV DL,33
+ 09CE  B9 0003			    MOV CX,3
+ 09D1  8D 36 003F R		    LEA SI,YINFU1
+ 09D5  83 C6 0C			    ADD SI,12
+ 09D8  E8 016F			    CALL YIN
+ 09DB  E9 010F			    JMP MA
+ 09DE				F2: 	
+ 09DE  B0 B6				MOV AL,0B6H
+ 09E0  E6 43				OUT 43H,AL
+ 09E2  B8 024B				MOV AX,587
+ 09E5  E6 42			    OUT 42H,AL
+ 09E7  8A C4			    MOV AL,AH
+ 09E9  E6 42			    OUT 42H,AL
+ 09EB  B2 24			    MOV DL,36
+ 09ED  B9 0003			    MOV CX,3
+ 09F0  8D 36 003F R		    LEA SI,YINFU1
+ 09F4  83 C6 0F			    ADD SI,15
+ 09F7  E8 0150			    CALL YIN
+ 09FA  E9 00F0			    JMP MA
+ 09FD				G2: 	
+ 09FD  B0 B6				MOV AL,0B6H
+ 09FF  E6 43				OUT 43H,AL
+ 0A01  B8 020B				MOV AX,523
+ 0A04  E6 42			    OUT 42H,AL
+ 0A06  8A C4			    MOV AL,AH
+ 0A08  E6 42			    OUT 42H,AL
+ 0A0A  B2 27			    MOV DL,39
+ 0A0C  B9 0003			    MOV CX,3
+ 0A0F  8D 36 003F R		    LEA SI,YINFU1
+ 0A13  83 C6 12			    ADD SI,18
+ 0A16  E8 0131			    CALL YIN
+ 0A19  E9 00D1			    JMP MA
+ 0A1C				A3: 	
+ 0A1C  B0 B6				MOV AL,0B6H
+ 0A1E  E6 43				OUT 43H,AL
+ 0A20  B8 07AF				MOV AX,1967
+ 0A23  E6 42			    OUT 42H,AL
+ 0A25  8A C4			    MOV AL,AH
+ 0A27  E6 42			    OUT 42H,AL
+ 0A29  B2 2A			    MOV DL,42
+ 0A2B  B9 0003			    MOV CX,3
+ 0A2E  8D 36 0069 R		    LEA SI,YINFU3
+ 0A32  E8 0115			    CALL YIN
+ 0A35  E9 00B5			    JMP MA
+ 0A38				B3:	
+ 0A38  B0 B6				MOV AL,0B6H
+ 0A3A  E6 43				OUT 43H,AL 
+ 0A3C  B8 06E0				MOV AX,1760
+ 0A3F  E6 42			    OUT 42H,AL
+ 0A41  8A C4			    MOV AL,AH
+ 0A43  E6 42			    OUT 42H,AL
+ 0A45  B2 2D			    MOV DL,45
+ 0A47  B9 0003			    MOV CX,3
+ 0A4A  8D 36 0069 R		    LEA SI,YINFU3
+ 0A4E  83 C6 03			    ADD SI,3
+ 0A51  E8 00F6			    CALL YIN
+ 0A54  E9 0096			    JMP MA
+ 0A57				C3: 
+ 0A57  B0 B6				MOV AL,0B6H
+ 0A59  E6 43				OUT 43H,AL
+ 0A5B  B8 0620				MOV AX,1568
+ 0A5E  E6 42			    OUT 42H,AL
+ 0A60  8A C4			    MOV AL,AH
+ 0A62  E6 42			    OUT 42H,AL
+ 0A64  B2 30			    MOV DL,48
+ 0A66  B9 0003			    MOV CX,3
+ 0A69  8D 36 0069 R		    LEA SI,YINFU3
+ 0A6D  83 C6 06			    ADD SI,6
+ 0A70  E8 00D7			    CALL YIN
+ 0A73  EB 78			    JMP MA
+ 0A75				D3:	
+ 0A75  B0 B6				MOV AL,0B6H
+ 0A77  E6 43				OUT 43H,AL 	
+ 0A79  B8 0575				MOV AX,1397
+ 0A7C  E6 42			    OUT 42H,AL
+ 0A7E  8A C4			    MOV AL,AH
+ 0A80  E6 42			    OUT 42H,AL
+ 0A82  B2 33			    MOV DL,51
+ 0A84  B9 0003			    MOV CX,3
+ 0A87  8D 36 0069 R		    LEA SI,YINFU3
+ 0A8B  83 C6 09				ADD SI,9
+ 0A8E  E8 00B9			    CALL YIN
+ 0A91  EB 5A			    JMP MA
+ 0A93				E3: 	
+ 0A93  B0 B6				MOV AL,0B6H
+ 0A95  E6 43				OUT 43H,AL
+ 0A97  B8 0527				MOV AX,1319
+ 0A9A  E6 42			    OUT 42H,AL
+ 0A9C  8A C4			    MOV AL,AH
+ 0A9E  E6 42			    OUT 42H,AL
+ 0AA0  B2 36			    MOV DL,54
+ 0AA2  B9 0003			    MOV CX,3
+ 0AA5  8D 36 0069 R		    LEA SI,YINFU3
+ 0AA9  83 C6 0C			    ADD SI,12
+ 0AAC  E8 009B			    CALL YIN
+ 0AAF  EB 3C			    JMP MA
+ 0AB1				F3: 	
+ 0AB1  B0 B6				MOV AL,0B6H
+ 0AB3  E6 43				OUT 43H,AL
+ 0AB5  B8 0497				MOV AX,1175
+ 0AB8  E6 42			    OUT 42H,AL
+ 0ABA  8A C4			    MOV AL,AH
+ 0ABC  E6 42			    OUT 42H,AL
+ 0ABE  B2 39			    MOV DL,57
+ 0AC0  B9 0003			    MOV CX,3
+ 0AC3  8D 36 0069 R		    LEA SI,YINFU3
+ 0AC7  83 C6 0F			    ADD SI,15
+ 0ACA  E8 007D			    CALL YIN
+ 0ACD  EB 1E			    JMP MA
+ 0ACF				G3: 	
+ 0ACF  B0 B6				MOV AL,0B6H
+ 0AD1  E6 43				OUT 43H,AL
+ 0AD3  B8 0417				MOV AX,1047
+ 0AD6  E6 42			    OUT 42H,AL
+ 0AD8  8A C4			    MOV AL,AH
+ 0ADA  E6 42			    OUT 42H,AL
+ 0ADC  B2 3C			    MOV DL,60
+ 0ADE  B9 0003			    MOV CX,3
+ 0AE1  8D 36 0069 R		    LEA SI,YINFU3
+ 0AE5  83 C6 12			    ADD SI,18
+ 0AE8  E8 005F			    CALL YIN
+ 0AEB  EB 00			    JMP MA
+ 0AED  E4 61			MA: IN AL,61H
+ 0AEF  0C 03			    OR AL,3
+ 0AF1  E6 61			    OUT 61H,AL
+ 0AF3  E8 0009			 	CALL DELAY
+ 0AF6  E4 61			    IN AL,61H
+ 0AF8  24 FC			    AND AL,0FCH
+ 0AFA  E6 61			    OUT 61H,AL
+ 0AFC  E9 FCCD				jmp WU
+ 0AFF				SONG ENDP
+ 0AFF				DELAY PROC
+ 0AFF  53						PUSH 	BX
+ 0B00  51						PUSH 	CX
+ 0B01  BB 0320						MOV 	BX,800
+ 0B04  B9 0500				DY1:	mov		cx,0500H
+ 0B07  E2 FE				DY0:	LOOP	DY0
+ 0B09  4B						DEC		BX
+ 0B0A  75 F8						JNZ		DY1
+							
+ 0B0C  59						POP		CX
+ 0B0D  5B						POP		BX
+ 0B0E  C3						RET
+ 0B0F				DELAY ENDP
+ 0B0F				EXIT:
+ 0B0F  B0 02			    MOV AL,2
+ 0B11  B4 05			    MOV AH,05H
+ 0B13  CD 10			    INT 10H
+ 0B15  B0 19			    MOV AL,25D
+ 0B17  B7 07			    MOV BH,0000111B
+ 0B19  B5 00			    MOV CH,0
+ 0B1B  B1 00			    MOV CL,0
+ 0B1D  B6 18			    MOV DH,24
+ 0B1F  B2 4F			    MOV DL,79
+ 0B21  B4 06			    MOV AH,06H
+ 0B23  CD 10			    INT 10H
+
+ 0B25  B4 00			    MOV AH,0
+ 0B27  8D 16 072C R		    LEA DX,THANK
+ 0B2B  B4 09			    MOV AH,09H
+ 0B2D  CD 21			    INT 21H
+ 0B2F  B7 02			    MOV BH,2
+ 0B31  B6 15			    MOV DH,21
+ 0B33  B2 32			    MOV DL,50
+ 0B35  B4 02			    MOV AH,02H
+ 0B37  CD 10			    INT 10H
+ 0B39  8D 16 01C6 R		    LEA DX,BUF4
+ 0B3D  B4 09			    MOV AH,09H
+ 0B3F  CD 21			    INT 21H
+
+ 0B41  B0 00			    MOV AL,0
+ 0B43  E6 61			    OUT 61H,AL
+ 0B45  B4 4C			    MOV AH,4CH
+ 0B47  CD 21			    INT 21H
+ 0B49  C3			    RET
+ 0B4A				YIN PROC
+ 0B4A  80 C2 04			    ADD DL,4
+ 0B4D				    LOP1:
+ 0B4D  B7 01			    MOV BH,1
+ 0B4F  B6 0A			    MOV DH,10
+ 0B51  B4 02			    MOV AH,02H
+ 0B53  CD 10			    INT 10H
+ 0B55  52			    PUSH DX
+ 0B56  8A 14			    MOV DL,[SI]
+ 0B58  B4 02			    MOV AH,2
+ 0B5A  CD 21			    INT 21H
+ 0B5C  46			    INC SI
+ 0B5D  5A			    POP DX
+ 0B5E  FE C2			    INC DL
+ 0B60  E2 EB			    LOOP LOP1
+ 0B62  C3			    RET
+ 0B63				YIN ENDP
+ 0B63				CLEAR PROC
+ 0B63  80 EA 03			    SUB DL,3
+ 0B66  B9 0003			    MOV CX,3
+ 0B69  8D 36 0783 R		    LEA SI,kongge
+ 0B6D				    LOP2:
+ 0B6D  B7 01			    MOV BH,1
+ 0B6F  B6 0A			    MOV DH,10
+ 0B71  B4 02			    MOV AH,02H
+ 0B73  CD 10			    INT 10H
+ 0B75  52			    PUSH DX
+ 0B76  8A 14			    MOV DL,[SI]
+ 0B78  B4 02			    MOV AH,2
+ 0B7A  CD 21			    INT 21H
+ 0B7C  46			    INC SI
+ 0B7D  5A			    POP DX
+ 0B7E  FE C2			    INC DL
+ 0B80  E2 EB			    LOOP LOP2
+ 0B82  C3			    RET
+ 0B83				CLEAR ENDP
+ 0B83				CLEAR1 PROC
+ 0B83  80 EA 03			    SUB DL,3
+ 0B86  B9 0003			    MOV CX,3
+ 0B89  8D 36 0787 R		    LEA SI,kongge1
+ 0B8D				    LOP2:
+ 0B8D  B7 01			    MOV BH,1
+ 0B8F  B6 0A			    MOV DH,10
+ 0B91  B4 02			    MOV AH,02H
+ 0B93  CD 10			    INT 10H
+ 0B95  52			    PUSH DX
+ 0B96  8A 14			    MOV DL,[SI]
+ 0B98  B4 02			    MOV AH,2
+ 0B9A  CD 21			    INT 21H
+ 0B9C  46			    INC SI
+ 0B9D  5A			    POP DX
+ 0B9E  FE C2			    INC DL
+ 0BA0  E2 EB			    LOOP LOP2
+ 0BA2  C3			    RET
+ 0BA3				CLEAR1 ENDP
+
+
+ 0BA3				CODES ENDS
+				END START
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microsoft (R) Macro Assembler Version 6.11		    06/09/16 17:37:28
+tempfile.asm						     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+CODES  . . . . . . . . . . . . .	16 Bit	 0BA3	  Para	  Private 
+DATAS  . . . . . . . . . . . . .	16 Bit	 07E4	  Para	  Private 
+STACKS . . . . . . . . . . . . .	16 Bit	 0064	  Para	  Private 
+
+
+Procedures,  parameters and locals:
+
+                N a m e                 Type     Value    Attr
+
+CLEAR1 . . . . . . . . . . . . .	P Near	 0B83	  CODES	Length= 0020 Public
+  LOP2 . . . . . . . . . . . . .	L Near	 0B8D	  CODES	
+CLEAR  . . . . . . . . . . . . .	P Near	 0B63	  CODES	Length= 0020 Public
+  LOP2 . . . . . . . . . . . . .	L Near	 0B6D	  CODES	
+DELAY  . . . . . . . . . . . . .	P Near	 0AFF	  CODES	Length= 0010 Public
+  DY1  . . . . . . . . . . . . .	L Near	 0B04	  CODES	
+  DY0  . . . . . . . . . . . . .	L Near	 0B07	  CODES	
+SANG . . . . . . . . . . . . . .	P Near	 013D	  CODES	Length= 060B Public
+  LIU  . . . . . . . . . . . . .	L Near	 013D	  CODES	
+  Ax1  . . . . . . . . . . . . .	L Near	 0153	  CODES	
+  Ax2  . . . . . . . . . . . . .	L Near	 0180	  CODES	
+  Ax3  . . . . . . . . . . . . .	L Near	 01B0	  CODES	
+  Ax4  . . . . . . . . . . . . .	L Near	 01E0	  CODES	
+  Ax5  . . . . . . . . . . . . .	L Near	 020D	  CODES	
+  Ax6  . . . . . . . . . . . . .	L Near	 023A	  CODES	
+  Ax7  . . . . . . . . . . . . .	L Near	 026A	  CODES	
+  Ax8  . . . . . . . . . . . . .	L Near	 029A	  CODES	
+  Ax9  . . . . . . . . . . . . .	L Near	 02C7	  CODES	
+  Ax10 . . . . . . . . . . . . .	L Near	 02F9	  CODES	
+  Ax11 . . . . . . . . . . . . .	L Near	 0329	  CODES	
+  Ax12 . . . . . . . . . . . . .	L Near	 0359	  CODES	
+  Ax13 . . . . . . . . . . . . .	L Near	 038B	  CODES	
+  Ax14 . . . . . . . . . . . . .	L Near	 03BB	  CODES	
+  Ax15 . . . . . . . . . . . . .	L Near	 03EB	  CODES	
+  Ax16 . . . . . . . . . . . . .	L Near	 041B	  CODES	
+  Ax17 . . . . . . . . . . . . .	L Near	 044B	  CODES	
+  Ax18 . . . . . . . . . . . . .	L Near	 047B	  CODES	
+  Ax19 . . . . . . . . . . . . .	L Near	 04AB	  CODES	
+  Ax20 . . . . . . . . . . . . .	L Near	 04DD	  CODES	
+  Ax21 . . . . . . . . . . . . .	L Near	 050A	  CODES	
+  Ax22 . . . . . . . . . . . . .	L Near	 053A	  CODES	
+  Ax23 . . . . . . . . . . . . .	L Near	 056A	  CODES	
+  Ax24 . . . . . . . . . . . . .	L Near	 059A	  CODES	
+  Ax25 . . . . . . . . . . . . .	L Near	 05CA	  CODES	
+  Ax26 . . . . . . . . . . . . .	L Near	 05FC	  CODES	
+  Ax27 . . . . . . . . . . . . .	L Near	 0629	  CODES	
+  Ax28 . . . . . . . . . . . . .	L Near	 0659	  CODES	
+  Ax29 . . . . . . . . . . . . .	L Near	 0689	  CODES	
+  Ax30 . . . . . . . . . . . . .	L Near	 06B8	  CODES	
+  Ax31 . . . . . . . . . . . . .	L Near	 06EA	  CODES	
+  Ax32 . . . . . . . . . . . . .	L Near	 071A	  CODES	
+SONG . . . . . . . . . . . . . .	P Near	 07CC	  CODES	Length= 06D1 Public
+  WU . . . . . . . . . . . . . .	L Near	 07CC	  CODES	
+  A1 . . . . . . . . . . . . . .	L Near	 0870	  CODES	
+  B1 . . . . . . . . . . . . . .	L Near	 088C	  CODES	
+  C1 . . . . . . . . . . . . . .	L Near	 08AB	  CODES	
+  D1 . . . . . . . . . . . . . .	L Near	 08CA	  CODES	
+  E1 . . . . . . . . . . . . . .	L Near	 08E9	  CODES	
+  F1 . . . . . . . . . . . . . .	L Near	 0908	  CODES	
+  G1 . . . . . . . . . . . . . .	L Near	 0927	  CODES	
+  A2 . . . . . . . . . . . . . .	L Near	 0946	  CODES	
+  B2 . . . . . . . . . . . . . .	L Near	 0962	  CODES	
+  C2 . . . . . . . . . . . . . .	L Near	 0981	  CODES	
+  D2 . . . . . . . . . . . . . .	L Near	 09A0	  CODES	
+  E2 . . . . . . . . . . . . . .	L Near	 09BF	  CODES	
+  F2 . . . . . . . . . . . . . .	L Near	 09DE	  CODES	
+  G2 . . . . . . . . . . . . . .	L Near	 09FD	  CODES	
+  A3 . . . . . . . . . . . . . .	L Near	 0A1C	  CODES	
+  B3 . . . . . . . . . . . . . .	L Near	 0A38	  CODES	
+  C3 . . . . . . . . . . . . . .	L Near	 0A57	  CODES	
+  D3 . . . . . . . . . . . . . .	L Near	 0A75	  CODES	
+  E3 . . . . . . . . . . . . . .	L Near	 0A93	  CODES	
+  F3 . . . . . . . . . . . . . .	L Near	 0AB1	  CODES	
+  G3 . . . . . . . . . . . . . .	L Near	 0ACF	  CODES	
+  MA . . . . . . . . . . . . . .	L Near	 0AED	  CODES	
+YIN  . . . . . . . . . . . . . .	P Near	 0B4A	  CODES	Length= 0019 Public
+  LOP1 . . . . . . . . . . . . .	L Near	 0B4D	  CODES	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+AI . . . . . . . . . . . . . . .	Byte	 078D	  DATAS	
+ANJIAN . . . . . . . . . . . . .	Byte	 007E	  DATAS	
+BEGINS . . . . . . . . . . . . .	Byte	 0228	  DATAS	
+BUF10  . . . . . . . . . . . . .	Byte	 01D7	  DATAS	
+BUF1 . . . . . . . . . . . . . .	Byte	 009C	  DATAS	
+BUF2 . . . . . . . . . . . . . .	Byte	 00AF	  DATAS	
+BUF3 . . . . . . . . . . . . . .	Byte	 0175	  DATAS	
+BUF4 . . . . . . . . . . . . . .	Byte	 01C6	  DATAS	
+BUF5 . . . . . . . . . . . . . .	Byte	 010F	  DATAS	
+BUF6 . . . . . . . . . . . . . .	Byte	 00CF	  DATAS	
+BUF7 . . . . . . . . . . . . . .	Byte	 00EF	  DATAS	
+BUF8 . . . . . . . . . . . . . .	Byte	 0131	  DATAS	
+BUF9 . . . . . . . . . . . . . .	Byte	 0153	  DATAS	
+ENDD . . . . . . . . . . . . . .	Byte	 0279	  DATAS	
+EXIT . . . . . . . . . . . . . .	L Near	 0B0F	  CODES	
+FIR  . . . . . . . . . . . . . .	Byte	 0779	  DATAS	
+FLAG1  . . . . . . . . . . . . .	Byte	 078C	  DATAS	
+KAISHI . . . . . . . . . . . . .	L Near	 0748	  CODES	
+LEN  . . . . . . . . . . . . . .	Number	 000Eh	 
+SEC  . . . . . . . . . . . . . .	Byte	 077E	  DATAS	
+START  . . . . . . . . . . . . .	L Near	 0000	  CODES	
+THANK  . . . . . . . . . . . . .	Byte	 072C	  DATAS	
+WATCHMEPLAY  . . . . . . . . . .	L Near	 00BC	  CODES	
+WE . . . . . . . . . . . . . . .	Byte	 02C0	  DATAS	
+YINFU1 . . . . . . . . . . . . .	Byte	 003F	  DATAS	
+YINFU2 . . . . . . . . . . . . .	Byte	 0054	  DATAS	
+YINFU3 . . . . . . . . . . . . .	Byte	 0069	  DATAS	
+YINFU4 . . . . . . . . . . . . .	Byte	 0000	  DATAS	
+YINFU5 . . . . . . . . . . . . .	Byte	 0015	  DATAS	
+YINFU6 . . . . . . . . . . . . .	Byte	 002A	  DATAS	
+kongge1  . . . . . . . . . . . .	Byte	 0787	  DATAS	
+kongge . . . . . . . . . . . . .	Byte	 0783	  DATAS	
+piano10  . . . . . . . . . . . .	Byte	 05E9	  DATAS	
+piano11  . . . . . . . . . . . .	Byte	 0639	  DATAS	
+piano12  . . . . . . . . . . . .	Byte	 0689	  DATAS	
+piano1 . . . . . . . . . . . . .	Byte	 0361	  DATAS	
+piano2 . . . . . . . . . . . . .	Byte	 03B2	  DATAS	
+piano3 . . . . . . . . . . . . .	Byte	 0403	  DATAS	
+piano4 . . . . . . . . . . . . .	Byte	 0454	  DATAS	
+piano5 . . . . . . . . . . . . .	Byte	 04A5	  DATAS	
+piano6 . . . . . . . . . . . . .	Byte	 04F6	  DATAS	
+piano7 . . . . . . . . . . . . .	Byte	 06DA	  DATAS	
+piano8 . . . . . . . . . . . . .	Byte	 0547	  DATAS	
+piano9 . . . . . . . . . . . . .	Byte	 0598	  DATAS	
+piano  . . . . . . . . . . . . .	Byte	 0310	  DATAS	
+
+	   0 Warnings
+	   0 Errors
